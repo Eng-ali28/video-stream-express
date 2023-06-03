@@ -1,0 +1,24 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Video {
+  id            String  @id() @default(uuid())
+  name          String  @db.VarChar(55)
+  description   String  @db.VarChar(55)
+  rate          Decimal
+  viewer_count  Int
+  second_number Int
+  video_url     String
+  cover_image   String
+
+  createdAt DateTime? @default(now())
+}
