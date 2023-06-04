@@ -1,4 +1,3 @@
-
 import prisma from "../src/startup/db";
 import video from "./video";
 
