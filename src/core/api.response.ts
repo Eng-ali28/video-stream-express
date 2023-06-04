@@ -10,7 +10,7 @@ type SuccessBody = {
 
 export default class SuccessResponse{
 
-    constructor(public status:StatusCodes ,public message :string , public data : any){
+    constructor(private status:StatusCodes ,private message :string , private data : any){
         this.status = status;
         this.data = data;
         this.message = message;

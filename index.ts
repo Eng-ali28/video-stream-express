@@ -2,6 +2,10 @@ import express from 'express';
 import env from "dotenv"
 env.config()
 
+process.on("uncaughtException", (error)=>{
+    console.log(error)
+})
+
 import config from 'config';
 import routes from "./src/startup/routes";
 import prisma from './src/startup/db';

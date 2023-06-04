@@ -21,4 +21,6 @@ model Video {
   cover_image   String
 
   createdAt DateTime? @default(now())
+
+  @@index([id])
 }
