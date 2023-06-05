@@ -18,7 +18,6 @@ RUN npm ci
 
 COPY . .
 
-RUN npx prisma generate
 
 EXPOSE 4000
 
