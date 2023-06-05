@@ -10,10 +10,10 @@ services:
       - /usr/src/app/node_modules
     ports:
       - "4000:4000"
-    command:  sh -c "
-      npx prisma generate
-      && npx prisma db push
-      && npx prisma db seed"
+    # command:  sh -c "
+    #   npx prisma generate
+    #   && npx prisma db push
+    #   && npx prisma db seed"
     depends_on:
       - db
 
